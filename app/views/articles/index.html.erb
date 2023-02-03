@@ -1,0 +1,16 @@
+<%# http://localhost:3000/articles %>
+
+<h1>Welcome to Blog</h1>
+<%#= link_to 'About', about_path %>
+
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h3><%= link_to article.title, article %></h3>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Article", new_article_path %>
